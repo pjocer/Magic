@@ -1,0 +1,153 @@
+//
+//  MagicPCH.pch
+//  Magic
+//
+//  Created by mxl on 16/1/3.
+//  Copyright © 2016年 mxl. All rights reserved.
+//
+
+#ifndef MagicPCH_pch
+#define MagicPCH_pch
+
+#import "LCNavigationController.h"
+#import "BaseViewController.h"
+#import "HomeViewController.h"
+#import <MJRefresh/MJRefresh.h>
+#import <UIImageView+WebCache.h>
+#import "NewDataModel.h"
+#import "UIViewExt.h"
+#import "ListViewController.h"
+#import "ListController1.h"
+#import "ListController2.h"
+#import "ListController3.h"
+#import "PlayViewController.h"
+#import "AppDelegate.h"
+#import "WaterFallFlowLayout.h"
+#import "MyCollectionViewCell.h"
+#import "TopTitleView.h"
+
+#import "CollectionController1.h"
+#import "CollectionController2.h"
+
+#import "ChannelViewController.h"
+#import "SoundsModel.h"
+#import "PlayAnimatView.h"
+
+// 播放器
+#import "STKAudioPlayer.h"
+#import "PlayBottomController.h"
+
+#import "PageViewController.h"
+#import "BtnTableViewCell.h"
+
+#import "ClassModel.h"
+#import "ClassViewController.h"
+
+#import "ClassTableViewCell.h"
+
+#import "ClassChannelController.h"
+
+#import "BottomCustomView.h"
+
+#import "XWBaseMethod.h"
+#import "JWCache.h"
+#import "NSString+Common.h"
+#import "DBManager.h"
+#import "CommentsView.h"
+#import "SoundsDetailModel.h"
+#import "PopView.h"
+#import "PersonalViewController.h"
+#import "MyBaseViewController.h"
+#import "MyloveViewController.h"
+#import "MyLastViewController.h"
+#import "MyDownViewController.h"
+#import "MyTableViewCell.h"
+#import "LGReachability.h"
+
+#define TITLE_COLOR [UIColor colorWithRed:0.048 green:0.092 blue:0.120 alpha:1.000]
+
+// 收藏类型
+#define COLLEC_TYPE @"LOVEType"
+
+#define DOWN_TYPE   @"DOWNType"
+
+#define LAST_TYPE   @"LASTType"
+
+// 单曲循环标示
+#define SING_MARK   @"single"
+
+#define CELL_HEIGHT 60
+
+#define CELL_SEL_COLOR  [UIColor colorWithWhite:0.000 alpha:0.520]
+
+
+#define ALLOW   1
+/**
+ *  分类对应频道
+ */
+#define CLASS   @"http://echosystem.kibey.com/channel/get?android_v=85&app_channel=wandoujia&limit=10&order=hot&page=%ld"
+
+#define CLASS_ONE @"&t=1452129700727&tag=%@&v=9&with_sound=0"
+/**
+ *  推荐音乐声音
+ */
+#define SUG_URL    @"http://echosystem.kibey.com/sound/hot?android_v=85&app_channel=wandoujia&page=%ld&t=1451810914012&v=9"
+/**
+    热门频道地址
+ */
+#define HOT_URL    @"http://echosystem.kibey.com/channel/get?page=%ld&with_sound=0&order=hot"
+/**
+    最新频道地址
+ */
+#define NEW_URL    @"http://echosystem.kibey.com/channel/get?page=%ld&with_sound=0&order=new"
+
+/**
+ *  频道对应详情地址
+ */
+#define CHANNEL    @"http://echosystem.kibey.com/channel/info?android_v=85&app_channel=wandoujia&id=%@&list_order=hot&page=%ld&t=1451910162420&v=9"
+
+/**
+ *  头部滚动地址
+ */
+#define Banner_URL @"http://echosystem.kibey.com/index/banner"
+/**
+    歌曲信息地址
+ */
+#define SOUND_DETAIL @"http://echosystem.kibey.com/sound/info?sound_id=%@"
+/**
+    歌曲评论地址
+ */
+#define COMMENT_URL @"http://echosystem.kibey.com/bullet/get?type=1&rand=1&page=%ld&limit=5&sound_id=%@"
+/**
+    分类地址
+ */
+#define CLASS_URL   @"http://echosystem.kibey.com/channel/get?android_v=85&app_channel=wandoujia&limit=10&order=hot&page=%ld&t=1451734707144&tag=&v=9&with_sound=0"
+/**
+    类别对应频道地址
+ */
+#define CHANNEL_URL @"http://echosystem.kibey.com/channel/info?android_v=85&app_channel=wandoujia&id=1155&list_order=hot&page=%ld&t=1451734833841&v=9"
+
+
+/**
+ *
+ */
+#define USER    @"http://echosystem.kibey.com/echofamous/music-video/users?android_v=85&app_channel=wandoujia&page=1&t=1452129997047&v=9&version=1"
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+
+#define Global_trelloBlue [UIColor colorWithRed:0.0f/255.0f green:124.0f/255.0f blue:194.0f/255.0f alpha:1.0f]
+#define Global_trelloDeepBlue [UIColor colorWithRed:13.0f/255.0f green:102.0f/255.0f blue:167.0f/255.0f alpha:1.0f]
+#define Global_trelloGray [UIColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f]
+#define Global_trelloLightGray [UIColor colorWithRed:175.0f/255.0f green:175.0f/255.0f blue:175.0f/255.0f alpha:1.0f]
+
+#define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width
+#define ScreenHeight                        [[UIScreen mainScreen] bounds].size.height
+
+#define Global_cellHeight 80.0f
+
+#endif /* MagicPCH_pch */
